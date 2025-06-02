@@ -16,6 +16,8 @@ RUN ./gradlew build -x test
 FROM azul/zulu-openjdk:17-latest
 WORKDIR /app
 
+# push하기
+
 # 빌드 스테이지에서 JAR 파일만 복사
 COPY --from=build /app/build/libs/*.jar app.jar
 
